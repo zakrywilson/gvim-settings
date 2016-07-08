@@ -8,6 +8,8 @@ behave mswin
 set t_Co=256
 filetype plugin indent on
 syntax on
+
+" Starting window size "
 set lines=52
 set columns=120
 
@@ -35,9 +37,12 @@ set noswapfile            "None of those stupid .swp files
 " Clear highlight search "
 nnoremap <esc><esc> :noh<return>
 
+" Disable highlighting first comment in Javadoc "
+let java_ignore_javadoc=1
+
 " Color scheme "
 set background=dark
-colorscheme desert
+colorscheme hybrid_material
 
 " Removing GUI toolbar, scroller, etc. "
 set guioptions-=m  "Remove menu bar
@@ -50,12 +55,15 @@ augroup collumnLimit
   autocmd!
   autocmd BufEnter,WinEnter,FileType scala,java
         \ highlight CollumnLimit ctermbg=DarkGrey guibg=DarkGrey
-  let collumnLimit = 100
+  let collumnLimit = 101
   let pattern =
         \ '\%<' . (collumnLimit+1) . 'v.\%>' . collumnLimit . 'v'
   autocmd BufEnter,WinEnter,FileType scala,java
         \ let w:m1=matchadd('CollumnLimit', pattern, -1)
 augroup END
+
+" Disable spell check in Javadoc comments "
+au BufRead,BufNewFile package.html source disable_javadoc_spellcheck.vim
 
 " Set the diff "
 set diffexpr=MyDiff()
@@ -82,4 +90,3 @@ function MyDiff()
   endif
   silent execute '!' . cmd . ' ' . opt . arg1 . ' ' . arg2 . ' > ' . arg3 . eq
 endfunction
-
