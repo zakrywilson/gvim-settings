@@ -8,8 +8,6 @@ behave mswin
 set t_Co=256
 filetype plugin indent on
 syntax on
-
-" Starting window size "
 set lines=52
 set columns=120
 
@@ -36,6 +34,10 @@ set noswapfile            "None of those stupid .swp files
 
 " Clear highlight search "
 nnoremap <esc><esc> :noh<return>
+
+" Quit application "
+inoremap <C-q> <esc>:qa!<cr>
+nnoremap <C-q> :qa!<cr>
 
 " Disable highlighting first comment in Javadoc "
 let java_ignore_javadoc=1
