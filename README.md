@@ -1,3 +1,3 @@
 # gvim-settings
 
-The settings I use for Windows GVim when I can't use Linux.
+The settings I use for Windows gVim when I can't use Linux.
