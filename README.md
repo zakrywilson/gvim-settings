@@ -4,7 +4,7 @@ The settings I use for Windows gVim when I can't use Linux.
 
 ## Color scheme
 
-The color scheme used in this setup is called `hybrid_material` and can be downloaded [here](https://github.com/kristijanhusak/vim-hybrid-material).
+The color scheme used in this setup is called `hybrid_material` and can be downloaded [here](https://github.com/kristijanhusak/vim-hybrid-material/blob/master/colors/hybrid_material.vim).
 
 ## How to use
 
