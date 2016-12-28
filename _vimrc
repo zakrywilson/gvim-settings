@@ -31,6 +31,7 @@ set visualbell            "No beeping
 set noerrorbells          "No beeping
 set nobackup              "No backup files
 set noswapfile            "None of those stupid .swp files
+set noundofile            "No annoying *un.~ files
 
 " Clear highlight search "
 nnoremap <esc><esc> :noh<return>
