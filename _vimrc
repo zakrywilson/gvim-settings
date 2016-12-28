@@ -20,7 +20,7 @@ retab
 " Misc "
 set numberwidth=5         "Allow for 5 character buffer
 set number                "Sets line numbers
-set guifont=Consolas:h11  "Use Consolas, size 11
+set guifont=Consolas:h10  "Use Consolas, size 10
 set cursorline            "Highlights the line you're on
 set hlsearch              "Highlights the things you search
 set showmatch             "Shows when {}, [], or () are matching
